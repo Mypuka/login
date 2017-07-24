@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name='wap-font-scal' content='no'>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta content='yes' name='apple-moblie-web-app-status-bar-style'>
+    <meta content="email=no" name="format-detection"/>
+    <meta name='format-detection' content="telephone=no">
+    <meta name="apple-mobile-web-app-title" content="">
+    <meta name="Keywords" content="test">
+    <title>登录</title>
+    <link rel="stylesheet" href="../css/global.css"/>
+    <link rel="stylesheet" href="../css/some-phone.css"/>
+    <style>
+        #login_form input{
+            background:#272E38;margin-top:0.3rem;
+            font-size:0.35rem;cursor: pointer;
+            border:none;color:#B6B8BB;
+            border-bottom: 1px solid #878B90;
+        }
+        #login_form input[type='text'],#login_form input[type='password']{
+            padding:0 0.2rem 0 1rem;
+            height:1rem;
+            width:100%;text-align: left;
+            background-image: url(../img/user_icon.png);
+            background-position:0.25rem 0.2rem;
+            background-size: 0.5rem;
+            background-repeat: no-repeat;
+        }
+        #login_form input[type='password']{
+            background-image: url(../img/pass_icon.png);
+        }
+        #login_form input[type='button']{
+            width:98%;margin:0;-webkit-appearance: none;
+            border:none;background:#0572AD;color:#ccc;
+            padding:0.15rem;border-radius:0.3rem;font-size:0.35rem;
+        }
+        #login_form .check{
+            text-align:left;padding-left:0.25rem;
+            height:1.2rem;line-height:1.2rem;
+        }
+        #login_form .check input{
+            margin:-0.03rem 0.1rem 0 0;width:0.3rem;
+        }
+        #login_form .check label{
+            color:#B6B8BB;font-size:0.3rem;
+        }
+        #login_form .check a{
+            color:#B6B8BB;
+        }
+        div.footer{
+            color:#aaa;display:flex;margin-top:0.3rem;padding:0 0.4rem;font-size:0.3rem;
+        }
+        div.footer .f-go a{
+             color:#f2f2f2;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            document.documentElement.style.fontSize = document.documentElement.clientWidth / 6.4 + 'px';
+        };
+    </script>
+</head>
+<body>
+    <div id="_body">
+        <!-- header-->
+        <div class="title">
+            <div class="back" onclick="top.location.href='register-phone.html'">
+                <span></span>
+                <div>返回</div>
+            </div>
+            <div class="content">
+                <div style="font-weight:600;">登录</div>
+            </div>
+        </div>
+        <div class="head">
+            <img src="../img/logo.png"/>
+        </div>
+        <!--section-->
+        <section>
+            <div class="section">
+                <form id="login_form">
+                    <p style="color:#fe6666;display:none;">用户名或者密码输入错误！</p>
+                    <input type="text" placeholder="账号" id='userName' autofocus/>
+                    <input type="password" placeholder="密码" id='pass/'>
+                    <div class="check">
+                        <input type="checkbox" checked name="chkRememberUsername" class="checkbox" id="rmbUser">
+                        <label for="rmbUser">记住用户名</label>
+                        <a href="javascript:;" class="fr">忘记密码？</a>
+                    </div>
+                    <input type="button" value="登　录" id='login_submit'/>
+                </form>
+            </div>
+        </section>
+        <div class="footer">
+            <div class="f-content">没有账号？</div>
+            <div class="f-go">去　<a href="register-phone.html">注册</a></div>
+        </div>
+    </div>
+    <script>
+
+    </script>
+</body>
+</html>

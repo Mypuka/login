@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PC-login</title>
+    <link rel="stylesheet" href="../css/global.css"/>
+    <link rel="stylesheet" href="../css/pc-login.css"/>
+    <style>
+        body{
+            width: 100%;
+            height: 100%;
+            background-image: url("../img/italy-banner.jpg");
+            background-attachment: fixed;
+            background-color: #282828;
+            background-position-x: center;
+            background-position-y: 0;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div id="_body">
+        <!-- header-->
+        <header>
+            <ul class="fl">
+                <li class="fl logo">
+                    <a href="javascript:;" class="block">
+                        <img src="../img/italy-logo.png">
+                    </a>
+                </li>
+                <li class="fl">
+                    <a href="">意起找</a>
+                    <div id="find" class="">
+                        <ul>
+                            <li class="fl">
+                                <a href="">
+                                    <img src="../img/eat.png" >
+                                </a>
+                            </li>
+                            <li class="fl">
+                                <a href="">
+                                    <img src="../img/play.png" >
+                                </a>
+                            </li>
+                            <li class="fl">
+                                <a href="">
+                                    <img src="../img/see.png" >
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="fl">
+                    <a href="">意起去</a>
+                    <div id="play" class="">
+                        <ul>
+                            <li class="fl">
+                                <a href="">
+                                    <img src="../img/italyzzg.png" alt="">
+                                </a>
+                            </li>
+                            <li class="fl">
+                                <a href="">
+                                    <img src="../img/wzydl.png" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="fl">
+                    <a href="">意起聊</a>
+                </li>
+                <li class="fl">
+                    <a href="">意起聚</a>
+                </li>
+                <li class="fl">
+                    <a href="">siamo in contatto</a>
+                </li>
+            </ul>
+            <ol class="fr">
+                <li class="fl">
+                    <h5 class='search'></h5>
+                    <input type="text" placeholder="请输入关键字" id="searchbox" class='hidden'>
+                </li>
+                <li class="fl">
+                    <h5 class="login"></h5>
+                </li>
+            </ol>
+        </header>
+        <!-- main  -->
+        <div id="main">
+            <!-- section-->
+            <section>
+                <h1>请登录或注册 <span>只需20秒</span></h1>
+                <div id="container" class="over">
+                    <div class="login fl">
+                        <div class="title">登录</div>
+                        <form id="login">
+                            <div class="input over">
+                                <span class="block fl">帐号：</span>
+                                <input type="text" placeholder="请输入您的帐号" name="uname" id="account" class="fl"/>
+                                <div class="action fl"></div>
+                            </div>
+                            <div class="input over">
+                                <span class="block fl">密码：</span>
+                                <input type="password" placeholder="请输入帐号密码" name="upawd" id="pawd" class="fl"/>
+                                <div class="action fl"></div>
+                            </div>
+                            <div class="input over">
+                                <span class="block fl">验证码：</span>
+                                <input type="text" placeholder="请输入验证码" name="num" id="num" class="fl"/>
+                                <canvas id="changeImg" width="80px" height="42px" class="fl"></canvas>
+                                <div class="action fl"></div>
+                            </div>
+                            <div class="check over">
+                                <input type="checkbox" checked name="rememberUser" id="rmbUser" class="fl"/>
+                                <label for="rmbUser" class="fl">记住用户名</label>
+                                <a href="javascript:;" class="fl">忘记密码？</a>
+                            </div>
+                            <div class="input btn over">
+                                <button>登 录</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="register fr">
+                        <div class="title">注册</div>
+                        <form id="register">
+                            <div class="input over">
+                                <span class="block fl">帐号：</span>
+                                <input type="text" placeholder="邮箱/手机号码/QQ号" name="uname" id="f-account" class="fl"/>
+                                <div class="action fl"></div>
+                            </div>
+                            <div class="input over">
+                                <span class="block fl">密码：</span>
+                                <input type="password" placeholder="6-16位密码，注意区分大小写" name="upawd" id="upawd" class="fl"/>
+                                <div class="action fl"></div>
+                            </div>
+                            <div class="input over">
+                                <span class="block fl">确认密码：</span>
+                                <input type="password" placeholder="再次输入密码" name="f-upawd1" id="f-upawd1" class="fl"/>
+                                <div class="action fl"></div>
+                            </div>
+                            <div class="input over">
+                                <span class="block fl">手机号码：</span>
+                                <input type="text" placeholder="11位手机号码" name="tel-num" id="tel-num" class="fl"/>
+                                <div class="action fl"></div>
+                            </div>
+                            <div class="input over">
+                                <span class="block fl">短信验证：</span>
+                                <input type="text" placeholder="请输入短信验证码" name="action-num" id="action-num" class="fl"/>
+                                <button class="fl">获取验证码</button>
+                                <div class="action fl"></div>
+                            </div>
+                            <div class="input btn over">
+                                <button>提交注册</button>
+                            </div>
+                            <p>用户注册即代表同意 《服务条款》和 《网络游戏用户隐私保护和个人信息利用政策》</p>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <!--footer -->
+            <footer>
+                <ul>
+                    <li class='fl'></li>
+                    <li class='fl'></li>
+                    <li class='fl'></li>
+                </ul>
+                <ol class='over'>
+                    <li>
+                        <a href="#">
+                            <img src="../img/footer-ico-1.png" alt="">
+                        </a>
+                    </li>
+                    <li id='infot' class='hidden'>
+                        <div style="border-bottom:1px solid #21242C">
+                            <a href="#">法律声明</a>
+                            <a href="#">合作方式</a>
+                            <a href="#">联系我们</a>
+                            <a href="#">客户服务</a>
+                        </div>
+                        <div>
+                            <a href="#">STYLEMODE 三滴风尚</a>
+                            <a href="#">STYLEAUTO 三滴车尚</a>
+                            <a href="#">STYLEHOUSE 三滴乐居</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../img/footer-ico-2.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../img/footer-ico-3.png" alt="">
+                        </a>
+                    </li>
+                </ol>
+                <p>STYLEMODE 2008-2013 All Right Reserved 京ICP备12040377号-1</p>
+            </footer>
+        </div>
+    </div>
+    <script src="../js/jquery-1.11.3.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name='wap-font-scal' content='no'>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta content='yes' name='apple-moblie-web-app-status-bar-style'>
+    <meta content="email=no" name="format-detection"/>
+    <meta name='format-detection' content="telephone=no">
+    <meta name="apple-mobile-web-app-title" content="">
+    <meta name="Keywords" content="test">
+    <title>test</title>
+    <link rel="stylesheet" href="css/global.css"/>
+    <style>
+        iframe{
+            width:100%;
+            margin:0 auto;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+    </style>
+    <script type="text/javascript">
+        function goPAGE() {
+            if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+//                console.log('移动端');
+                var iphone = document.getElementById("i");
+                iphone.src="html/login-phone.html";
+            }
+            else {
+//                console.log('PC端');
+                var PC = document.getElementById("i");
+                PC.src="html/login-pc.html";
+            }
+        }
+        function changeFrameHeight(){
+            var ifm= document.getElementById("i");
+            ifm.height=document.documentElement.clientHeight;
+        }
+
+        window.onresize=function(){
+            changeFrameHeight();
+
+        };
+        window.onload=function(){
+            goPAGE();
+            document.documentElement.style.fontSize = document.documentElement.clientWidth / 6.4 + 'px';
+        };
+    </script>
+</head>
+<body style='overflow: hidden;'>
+    <div id="content">
+        <iframe src="" id="i" onload="changeFrameHeight()" frameborder="0"></iframe>
+    </div>
+</body>
+</html>

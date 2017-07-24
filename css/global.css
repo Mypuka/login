@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* 全局、重定义 */
+*{
+    padding:0;  margin:0;  box-sizing: border-box;
+    list-style:none;font-weight:normal;
+}
+body{
+    -webkit-user-select: none; -webkit-text-size-adjust: none;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
+    text-align:center;height:100%;font-size:0.26rem;
+    font-family:"microsoft yahei","微软雅黑", helvetica, arial;
+    background:#fff;
+    font-weight:normal;color: #212121;padding:0;margin:0 auto;
+}
+body,header,section,footer{
+    width:100%;  height:100%;
+}
+img{
+    width:100%;
+}
+a{
+    color:#333;  cursor:pointer;text-decoration:none;
+}
+a:hover{
+    text-decoration: none;color:#f1f1f1;
+}
+.fl{
+    float:left;
+}
+.fr{
+    float: right;
+}
+.hidden{
+    display:none;
+}
+.over{
+    overflow: hidden;
+}
+input,select,textarea,button{
+    box-sizing: border-box;  vertical-align: middle;
+    border:none;  cursor:pointer;  outline: 0;
+    -webkit-appearance: none;
+}
